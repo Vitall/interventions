@@ -4,10 +4,8 @@ import {
   Text, Button,
   Form, Item, Input
 } from "native-base";
-import { StyleSheet, Dimensions, Platform } from 'react-native';
 
-const deviceHeight = Dimensions.get("window").height;
-const deviceWidth = Dimensions.get("window").width;
+import styles from './styles';
 
 export default class Login extends React.Component {
   render() {
@@ -20,7 +18,7 @@ export default class Login extends React.Component {
           <Item last>
             <Input placeholder="Password" />
           </Item>
-          <Button primary onPress={() => this.props.navigation.navigate("AppTabs")}>
+          <Button primary onPress={() => this.props.navigation.navigate("Interventions")}>
             <Text> Login </Text>
           </Button>
         </Form>
@@ -28,18 +26,3 @@ export default class Login extends React.Component {
     );
   }
 }
-
-const styles = {
-  wrapper: {
-    borderColor: 'red',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    height: deviceHeight,
-    width: deviceWidth
-  },
-  from: {
-    width: deviceWidth / 3 * 2
-  }
-};

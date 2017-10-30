@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import { Image, View, StatusBar } from "react-native";
+import { Dimensions } from 'react-native';
 
-import { Container, Button, H3, Text, Header, Title, Body, Left, Right } from "native-base";
+const deviceHeight = Dimensions.get("window").height;
+const deviceWidth = Dimensions.get("window").width;
 
-import styles from "./styles";
-
-class Login extends Component {
-  render() {
-    return (
-      <Container>
-        <StatusBar barStyle="light-content" />
-        <View>
-
-        </View>
-      </Container>
-    );
+export default {
+  wrapper: {
+    borderColor: 'red',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    height: deviceHeight,
+    width: deviceWidth
+  },
+  from: {
+    width: deviceWidth / 3 * 2
   }
 }

@@ -4,12 +4,12 @@ import { Image } from 'react-native';
 import { Container, Content, Header } from "native-base";
 
 import Login from './components/Login';
-import AppTabs from './components/AppTabs';
+import Interventions from './components/Interventions';
 
 const MainEntryPoint = StackNavigator(
   {
     Login: { screen: Login },
-    AppTabs: { screen: AppTabs },
+    Interventions: { screen: Interventions },
   },
   {
     initialRouteName: "Login",
@@ -27,9 +27,9 @@ export default () =>
 const styles = {
   wrapper: {
     flex: 1,
-    borderColor: 'green',
-    borderStyle: 'solid',
-    borderWidth: 1,
+    // borderColor: 'green',
+    // borderStyle: 'solid',
+    // borderWidth: 1,
   },
   root: {
     flex: 1,
